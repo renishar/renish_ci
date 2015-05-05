@@ -286,3 +286,15 @@ if ( ! function_exists('delFiles'))
         }
     }
 }
+
+if ( ! function_exists('delFiles'))
+{
+ 	function TrimArray($Input)
+ 	{
+		if (!is_array($Input))
+        		return trim($Input);
+		return array_map('TrimArray', $Input);
+	}
+}
+
+?>
