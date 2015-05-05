@@ -181,7 +181,7 @@ class Jquery_Pagination
          $curr_offset = $CI->uri->segment($this->uri_segment);
          $info = '<div class="pull-right"><div class="">Showing ' . ( $curr_offset + 1 ) . ' to ' ;
 
-         if( ( $curr_offset + $this->per_page ) < ( $this->total_rows -1 ) )
+         if( ( $curr_offset + $this->per_page ) <= ( $this->total_rows -1 ) )
             $info .= $curr_offset + $this->per_page;
          else
             $info .= $this->total_rows;
